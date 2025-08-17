@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Préstamos CoderHouse</title>
+    <title>Simulador de Préstamos - CoderHouse</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <h1>Mi Simulador de Préstamos</h1>
+    <header>
+        <h1>Simulador de Préstamos</h1>
+    </header>
+
+    <main>
+        <section id="simulador-section">
+            <h2>Calcula tu Préstamo</h2>
+            <form id="prestamo-form">
+                <div class="form-group">
+                    <label for="monto">Monto del Préstamo:</label>
+                    <input type="number" id="monto" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="tasa">Tasa de Interés Anual (%):</label>
+                    <input type="number" id="tasa" required min="0.01">
+                </div>
+                <div class="form-group">
+                    <label for="plazo">Plazo en Meses:</label>
+                    <input type="number" id="plazo" required min="1">
+                </div>
+                <button type="submit">Calcular</button>
+            </form>
+            <div id="resultado-container">
+            </div>
+        </section>
+
+        <section id="historial-section">
+            <h2>Historial de Simulaciones</h2>
+            <div id="historial-container">
+            </div>
+            <button id="limpiar-historial-btn">Limpiar Historial</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Simulador de prestamos</p>
+    </footer>
+
     <script src="main.js"></script>
 </body>
+
 </html>
